@@ -35,6 +35,21 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        .slider {
+            position: relative;
+        }
+
+        .slider-inner {
+            display: flex;
+            transition: transform 1s ease;
+        }
+
+        .slider-item {
+            min-width: 100%;
+            /* margin-right: 20px; */
+        }
+
+
          /* Hide the default scrollbar */
          ::-webkit-scrollbar {
             width: 8px;
@@ -396,15 +411,23 @@
                                         <span class="font-bold text-indigo-500">A</span>MA TABULATION SYSTEM FOR SPORTS AND EVENT’S
                                     </span>
                                 </div>
+                                
                                 <div class="flex flex-col justify-center items-center">
-                                    <div class="">
-                                        <img class="w-[300px] h-[300px] transform transition-transform duration-300 hover:scale-110" src="./projects/ama/home.JPG" alt="">
-                                        <div class="flex items-center justify-between text-xl">
-                                            <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
-                                            <i data-id="0" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
+                                    <div class="slider relative w-[340px] h-[300px] md:w-[400px] overflow-hidden">
+                                        <div class="slider-inner absolute w-full h-full">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ama/home.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ama/home-2.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ama/home-3.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ama/home-4.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ama/home-5.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ama/home-6.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ama/home-7.png" alt="">
                                         </div>
                                     </div>
-                                    
+                                </div>
+                                <div class="flex items-center justify-between text-xl w-full">
+                                    <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
+                                    <i data-id="0" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
                                 </div>
                             </div>
 
@@ -416,14 +439,21 @@
                                     </span>
                                 </div>
                                 <div class="flex flex-col justify-center items-center">
-                                    <div class="">
-                                        <img class="w-[300px] h-[300px] transform transition-transform duration-300 hover:scale-110" src="./projects/ama/home.JPG" alt="">
-                                        <div class="flex items-center justify-between text-xl">
-                                            <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
-                                            <i data-id="1" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
+                                    <div class="slider relative w-[340px] h-[300px] md:w-[400px] overflow-hidden">
+                                        <div class="slider-inner absolute w-full h-full">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/exousia/home.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/exousia/home-2.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/exousia/home-3.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/exousia/home-4.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/exousia/home-5.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/exousia/home-6.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/exousia/home-7.JPG" alt="">
                                         </div>
                                     </div>
-                                    
+                                </div>
+                                <div class="flex items-center justify-between text-xl w-full">
+                                    <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
+                                    <i data-id="1" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
                                 </div>
                             </div>
         
@@ -435,14 +465,21 @@
                                     </span>
                                 </div>
                                 <div class="flex flex-col justify-center items-center">
-                                    <div class="">
-                                        <img class="w-[300px] h-[300px] transform transition-transform duration-300 hover:scale-110" src="./projects/madtrack/home.JPG" alt="">
-                                        <div class="flex items-center justify-between text-xl">
-                                            <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
-                                            <i data-id="2" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
+                                    <div class="slider relative w-[340px] h-[300px] md:w-[400px] overflow-hidden">
+                                        <div class="slider-inner absolute w-full h-full">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/madtrack/home.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/madtrack/home-2.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/madtrack/home-3.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/madtrack/home-4.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/madtrack/home-5.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/madtrack/home-6.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/madtrack/home-7.JPG" alt="">
                                         </div>
                                     </div>
-                                    
+                                </div>
+                                <div class="flex items-center justify-between text-xl w-full">
+                                    <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
+                                    <i data-id="2" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
                                 </div>
                             </div>
         
@@ -454,14 +491,21 @@
                                     </span>
                                 </div>
                                 <div class="flex flex-col justify-center items-center">
-                                    <div class="">
-                                        <img class="w-[300px] h-[300px] transform transition-transform duration-300 hover:scale-110" src="./projects/dts/home.JPG" alt="">
-                                        <div class="flex items-center justify-between text-xl">
-                                            <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
-                                            <i data-id="3" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
+                                    <div class="slider relative w-[340px] h-[300px] md:w-[400px] overflow-hidden">
+                                        <div class="slider-inner absolute w-full h-full">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/dts/home.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/dts/home-2.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/dts/home-3.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/dts/home-4.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/dts/home-5.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/dts/home-6.JPG" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/dts/home-7.JPG" alt="">
                                         </div>
                                     </div>
-                                    
+                                </div>
+                                <div class="flex items-center justify-between text-xl w-full">
+                                    <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
+                                    <i data-id="3" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
                                 </div>
                             </div>
         
@@ -473,14 +517,21 @@
                                     </span>
                                 </div>
                                 <div class="flex flex-col justify-center items-center">
-                                    <div class="">
-                                        <img class="w-[300px] h-[300px] transform transition-transform duration-300 hover:scale-110" src="./projects/ama/home.JPG" alt="">
-                                        <div class="flex items-center justify-between text-xl">
-                                            <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
-                                            <i data-id="4" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
+                                    <div class="slider relative w-[340px] h-[300px] md:w-[400px] overflow-hidden">
+                                        <div class="slider-inner absolute w-full h-full">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/bitezone/home.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/bitezone/home-2.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/bitezone/home-3.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/bitezone/home-4.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/bitezone/home-5.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/bitezone/home-6.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/bitezone/home-7.png" alt="">
                                         </div>
                                     </div>
-                                    
+                                </div>
+                                <div class="flex items-center justify-between text-xl w-full">
+                                    <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
+                                    <i data-id="4" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
                                 </div>
                             </div>
         
@@ -492,14 +543,21 @@
                                     </span>
                                 </div>
                                 <div class="flex flex-col justify-center items-center">
-                                    <div class="">
-                                        <img class="w-[300px] h-[300px] transform transition-transform duration-300 hover:scale-110" src="./projects/ama/home.JPG" alt="">
-                                        <div class="flex items-center justify-between text-xl">
-                                            <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
-                                            <i data-id="5" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
+                                    <div class="slider relative w-[340px] h-[300px] md:w-[400px] overflow-hidden">
+                                        <div class="slider-inner absolute w-full h-full">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ats/home.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ats/home-2.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ats/home-3.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ats/home-4.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ats/home-5.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ats/home-6.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/ats/home-7.png" alt="">
                                         </div>
                                     </div>
-                                    
+                                </div>
+                                <div class="flex items-center justify-between text-xl w-full">
+                                    <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
+                                    <i data-id="5" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
                                 </div>
                             </div>
         
@@ -511,14 +569,21 @@
                                     </span>
                                 </div>
                                 <div class="flex flex-col justify-center items-center">
-                                    <div class="">
-                                        <img class="w-[300px] h-[300px] transform transition-transform duration-300 hover:scale-110" src="./projects/ama/home.JPG" alt="">
-                                        <div class="flex items-center justify-between text-xl">
-                                            <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
-                                            <i data-id="6" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
+                                    <div class="slider relative w-[340px] h-[300px] md:w-[400px] overflow-hidden">
+                                        <div class="slider-inner absolute w-full h-full">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/parkhere/home.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/parkhere/home-2.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/parkhere/home-3.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/parkhere/home-4.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/parkhere/home-5.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/parkhere/home-6.png" alt="">
+                                            <img class="slider-item w-full h-full transform transition-transform duration-300 hover:scale-150" src="./projects/parkhere/home-7.png" alt="">
                                         </div>
                                     </div>
-                                    
+                                </div>
+                                <div class="flex items-center justify-between text-xl w-full">
+                                    <span><span class="font-bold text-indigo-500">P</span>roject <span class="font-bold text-indigo-500">D</span>etail's</span>
+                                    <i data-id="6" class="open fa-sharp fa-solid fa-arrow-right font-bold text-indigo-500 text-xl hover:cursor-pointer hover:text-indigo-700"></i>
                                 </div>
                             </div>
 
@@ -630,7 +695,19 @@
                 runAnimation()
             })
 
+            var $sliderInner = $('.slider-inner');
+            var $sliderItems = $('.slider-item');
+            var currentIndex = 0;
+
             
+            function showNextImage() {
+                console.log((currentIndex + 1) % 7)
+                currentIndex = (currentIndex + 1) % 7;
+                $sliderItems.addClass('scale-110')
+                $sliderInner.css('transform', 'translateX(-' + (currentIndex * 100) + '%)');
+            }
+
+            setInterval(showNextImage, 3000); // Change image every 3 seconds
         })
 
         //render projects click details
