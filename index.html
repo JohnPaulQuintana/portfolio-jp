@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Tailwind CSS</title>
+
+    <link
+    rel="stylesheet"
+    data-purpose="Layout StyleSheet"
+    title="Web Awesome"
+    href="/css/app-wa-462d1fe84b879d730fe2180b0e0354e0.css?vsn=d"
+  />
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+  />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+         /* Hide the default scrollbar */
+         ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #6266f1;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2b302e;
+            cursor: pointer;
+        }
+        
+        .menu-enter {
+            transform: scale(95%);
+            opacity: 0;
+        }
+
+        .menu-enter-active {
+            transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+            transform: scale(100%);
+            opacity: 1;
+        }
+
+        .menu-leave {
+            transform: scale(100%);
+            opacity: 1;
+        }
+
+        .menu-leave-active {
+            transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+            transform: scale(95%);
+            opacity: 0;
+        }
+
+        .stagger-menu-enter {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .stagger-menu-enter-active {
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 font-sans">
+    <nav class="bg-gray-800 fixed w-full z-[9999]">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-2 font-bold text-gray-400">
+                    <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                        alt="Workflow logo">
+                    <span>JP QUINTANA</span>
+                </div>
+
+                <!-- Mobile menu button-->
+                <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed. -->
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <!-- Icon when menu is open. -->
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="flex">
+                    <!-- Menu -->
+                    <div class="hidden sm:flex sm:items-center sm:space-x-4">
+                        <a href="#"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"><span class="text-indigo-500 font-bold">A</span>bout</a>
+                        <a href="#"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"><span class="text-indigo-500 font-bold">P</span>rojects</a>
+                        <a href="#"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"><span class="text-indigo-500 font-bold">E</span>xperience</a>
+                        <!-- <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a> -->
+                    </div>
+
+                    <!-- Profile dropdown -->
+                    <div class="hidden sm:flex sm:items-center">
+
+                        <div class="ml-3 relative">
+                            <div>
+                                <button type="button"
+                                    class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                    id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="h-8 w-8 rounded-full"
+                                        src="./image/default-1.png"
+                                        alt="">
+                                </button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden hidden transition transform ease-out duration-200" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#"
+                    class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"><span class="text-indigo-500 font-bold">A</span>bout</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"><span class="text-indigo-500 font-bold">P</span>rojects</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"><span class="text-indigo-500 font-bold">E</span>xperience</a>
+                <!-- <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a> -->
+            </div>
+        </div>
+    </nav>
+    <div class="p-8"></div>
+    <!-- content -->
+     <section class="p-2 md:p-10">
+        <div class="rounded-md border-0 p-2 relative">
+            <!-- <div class="flex items-center justify-between px-2 mb-2">
+                <span class="text-gray-400"><span class="text-indigo-500 font-bold">I</span>nteractive <span class="text-indigo-500 font-bold">N</span>avigation</span>
+                <i class="fa-sharp fa-solid fa-street-view fa-beat-fade text-2xl text-indigo-500"></i>
+            </div> -->
+            <div id="grid-container" class="absolute grid w-full opacity-25 z-99">
+                
+            </div>
+
+            <div class=" absolute z-[999] w-full p-2 ">
+                <div class="flex items-center justify-between">
+                    <span class="text-white bg-indigo-500 px-1 tracking-widest"><span class="font-bold text-gray-900">A</span>bout <span class="font-bold text-gray-900">M</span>e</span>
+                    <i class="fa-solid fa-address-card text-indigo-500 text-2xl"></i>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+                    <div class="w-fit md:border-r-4 border-indigo-500">
+                        <img class="h-[200px] w-[200px] md:w-[300px] md:h-[300px]" src="./image/default-1.png" alt="">
+                    </div>
+
+                    <div class="text-gray-200 tracking-wider w-[400px] md:w-[500px]">
+                        <span class="text-3xl md:text-5xl"><span class="font-bold text-indigo-500">H</span>ello <span class="font-bold text-indigo-500">T</span>here,</span>
+                        
+                        <div class="flex items-center gap-2 font-bold tracking-widest mt-4">
+                            <div class="flex flex-col md:flex-row md:gap-2 items-center bg-gray-800 md:bg-gray-900 p-1 text-indigo-500 rounded-sm">
+                                <i class="fa-solid fa-square-code"></i> 
+                                <span>
+                                    Freelancer
+                                </span>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:gap-2 items-center bg-gray-800 md:bg-gray-900 p-1 text-indigo-500 rounded-sm">
+                                <i class="fa-solid fa-square-code"></i>
+                                <span> Web Developer</span>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:gap-2 items-center bg-gray-800 md:bg-gray-900 p-1 text-indigo-500 rounded-sm">
+                                <i class="fa-solid fa-chart-mixed"></i>
+                                <span>
+                                    Data Analyst
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="md:text-lg mt-4">
+                            I'm a freelance web developer and data analyst specializing in crafting responsive websites and deriving insights from data. I'm passionate about transforming ideas into digital solutions that drive growth and enhance user experiences. Open to small-scale projects, I provide personalized attention and deliver high-quality results tailored to your needs.
+                        </p>
+                    </div>
+                    
+                </div>
+                <div>
+                    <div class="flex items-center justify-between mt-10">
+                        <span class="text-white bg-indigo-500 px-1 tracking-widest"><span class="font-bold text-gray-900">T</span>echnology <span class="font-bold text-gray-900">U</span>sed</span>
+                        <i class="fa-solid fa-rectangle-code text-indigo-500 text-2xl"></i>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="bg-gray-800 md:bg-gray-900 tracking-wider text-gray-200">
+                            <div class="p-2 rounded-md flex-1">
+                                <span>
+                                    <span class="font-bold text-indigo-500">B</span>ackend 
+                                    <span class="font-bold text-indigo-500">T</span>echnology
+                                </span>
+                            </div>
+                            <div class="flex gap-2 p-2 text-indigo-500">
+                                
+                                <div class="bg-gray-900 md:bg-gray-800 p-2 font-bold flex flex-col text-center items-center">
+                                    <i class="fa-brands fa-laravel text-5xl"></i>
+                                    <span class="text-gray-300">Laravel Framework</span>
+                                </div>
+    
+                                <div class="bg-gray-900 md:bg-gray-800 p-2 font-bold flex flex-col text-center items-center">
+                                    <i class="fa-solid fa-database text-5xl"></i>
+                                    <span class="text-gray-300">MySQL Database</span>
+                                </div>
+    
+                                <div class="bg-gray-900 md:bg-gray-800 p-2 font-bold flex flex-col text-center items-center">
+                                    <i class="fa-solid fa-server text-5xl"></i>
+                                    <span class="text-gray-300">RESTful APIs</span>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+    
+                        <div class="bg-gray-800 md:bg-gray-900 tracking-wider text-gray-200">
+                            <div class="p-2 rounded-md flex-1">
+                                <span>
+                                    <span class="font-bold text-indigo-500">F</span>rontend 
+                                    <span class="font-bold text-indigo-500">T</span>echnology
+                                </span>
+                            </div>
+                            <div class="flex gap-2 p-2 text-indigo-500">
+                                
+                                <div class="bg-gray-900 md:bg-gray-800 p-2 font-bold flex flex-col text-center items-center">
+                                    <i class="fa-brands fa-js-square text-5xl"></i>
+                                    <span class="text-gray-300">Javascript</span>
+                                </div>
+    
+                                <div class="bg-gray-900 md:bg-gray-800 p-2 font-bold flex flex-col text-center items-center">
+                                    <i class="fa-brands fa-js-square text-5xl"></i>
+                                    <span class="text-gray-300">Jquery</span>
+                                </div>
+    
+                                <div class="bg-gray-900 md:bg-gray-800 p-2 font-bold flex flex-col text-center items-center">
+                                    <i class="fa-brands fa-css3-alt text-5xl"></i>
+                                    <span class="text-gray-300">Tailwind CSS</span>
+                                </div>
+    
+                                <div class="bg-gray-900 md:bg-gray-800 p-2 font-bold flex flex-col text-center items-center">
+                                    <i class="fa-solid fa-chart-line text-5xl"></i>
+                                    <span class="text-gray-300">Chart.js</span>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+
+        </div>
+     </section>
+     <!-- end of content -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            const $userMenuButton = $('#user-menu-button');
+            const $dropdownMenu = $userMenuButton.next();
+
+            $userMenuButton.click(function() {
+                if ($dropdownMenu.hasClass('hidden')) {
+                $dropdownMenu.removeClass('hidden menu-leave menu-leave-active').addClass('menu-enter');
+                setTimeout(function() {
+                    $dropdownMenu.removeClass('menu-enter').addClass('menu-enter-active');
+                }, 10);
+                } else {
+                $dropdownMenu.removeClass('menu-enter menu-enter-active').addClass('menu-leave');
+                setTimeout(function() {
+                    $dropdownMenu.removeClass('menu-leave').addClass('hidden menu-leave-active');
+                }, 200);
+                }
+            });
+
+            const $mobileMenuButton = $('nav button[aria-controls="mobile-menu"]');
+            const $mobileMenu = $('#mobile-menu');
+            const $mobileMenuLinks = $mobileMenu.find('a');
+
+            $mobileMenuButton.click(function() {
+                if ($mobileMenu.hasClass('hidden')) {
+                $mobileMenu.removeClass('hidden menu-leave menu-leave-active').addClass('menu-enter');
+                setTimeout(function() {
+                    $mobileMenu.removeClass('menu-enter').addClass('menu-enter-active');
+                    $mobileMenuLinks.each(function(index) {
+                    const $link = $(this);
+                    setTimeout(function() {
+                        $link.addClass('stagger-menu-enter-active');
+                    }, index * 100);
+                    });
+                }, 10);
+                } else {
+                $mobileMenu.removeClass('menu-enter menu-enter-active').addClass('menu-leave');
+                setTimeout(function() {
+                    $mobileMenu.removeClass('menu-leave').addClass('hidden menu-leave-active');
+                    $mobileMenuLinks.removeClass('stagger-menu-enter-active');
+                }, 200);
+                }
+            });
+           
+           
+            // Initial check and setup
+            checkScreenSize();
+            // Re-check on window resize
+             $(window).resize(checkScreenSize);
+
+             runAnimation()
+            // Attach scroll event listener using jQuery
+            $(window).scroll(function() {
+                runAnimation()
+            })
+
+            
+        })
+
+        const runAnimation = () => {
+            anime({
+                    targets: '.dot-point',
+                    scale: [
+                        { value: 1.35, easing: 'easeOutSine', duration: 250 },
+                        { value: 1, easing: 'easeInOutQuad', duration: 500 },
+                    ],
+                    translateY: [
+                        { value: -15, easing: 'easeOutSine', duration: 250 },
+                        { value: 0, easing: 'easeInOutQuad', duration: 500 }
+                    ],
+                    opacity: [
+                        { value: 1, easing: 'easeOutSine', duration: 250 },
+                        { value: 0.5, easing: 'easeInOutQuad', duration: 500 }
+                    ],
+                    delay: anime.stagger(100, {
+                        grid: [20, 20],
+                        from: 55,
+                    }),
+                })
+        }
+        const generateGrid = (rows, cols)=>{
+            const $gridContainer = $('#grid-container');
+            const label = ['fa-house','fa-address-card']
+            let index = 0;
+            $gridContainer.empty(); // Clear any existing grid items
+            for (let y = 1; y <= rows; y++) {
+                for (let x = 1; x <= cols; x++) {
+                    index ++;
+                    $gridContainer.append(`<div class="group cursor-pointer rounded-full md:rounded-md md:w-fit p-2 transition-colors hover:bg-slate-600">
+                            <div data-index="${index}" class="dot-point h-2 w-2 md:h-20 md:w-20 rounded-full md:rounded-md bg-gradient-to-b from-slate-700 to-slate-400 opacity-50 group-hover:from-indigo-600 group-hover:to-white"></div>
+                        </div>`);
+                }
+            }
+        }
+
+        const checkScreenSize = () => {
+            const isMobile = window.matchMedia("(max-width: 640px)").matches;
+            // console.log(isMobile)
+            if (isMobile) {
+                $('#grid-container').addClass('grid-cols-10');
+                generateGrid(20, 20);
+            } else {
+                $('#grid-container').addClass('grid-cols-10');
+                // $('#grid-container');
+                generateGrid(20, 20);
+            }
+        }
+    </script>
+</body>
+
+</html>
